@@ -20,23 +20,23 @@ func _process(delta: float) -> void:
 	if hours > 99:
 		on_reset_pressed()
 
-		if stopwatch > 60:
-			stopwatch -= 60
-			minutes += 1
-			if minutes == 60:
-				minutes = 0
-				hours += 1
-				%Hours.text= str(hours)
-				%Minutes.text = str(minutes)
-			elif minutes < 10:
-				%Minutes.text = str("00", minutes)
-			else:
-				%Minutes.text = str(minutes)
+	if stopwatch > 60:
+		stopwatch -= 60
+		minutes += 1
+	if minutes == 60:
+		minutes = 0
+		hours += 1
+		%Hours.text= str(hours)
+		%Minutes.text = str(minutes)
+	elif minutes < 10:
+		%Minutes.text = str("00", minutes)
+	else:
+		%Minutes.text = str(minutes)
 		
-		if stopwatch < 10:
-			%StopWatch.text = str("00", stopwatch).pad_decimals(2)
-		else:
-			%StopWatch.text = str(stopwatch).pad_decimals(2)
+	if stopwatch < 10:
+		%StopWatch.text = str("0", stopwatch).pad_decimals(2)
+	else:
+		%StopWatch.text = str(stopwatch).pad_decimals(2)
 
 
 func _on_start_pressed() -> void:

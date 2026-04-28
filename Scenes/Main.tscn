@@ -13,22 +13,13 @@ handle_input_locally = false
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(256, 300)
-mouse_passthrough_polygon = PackedVector2Array(256, 256)
-exclusive = true
 unresizable = true
 always_on_top = true
 extend_to_title = true
 minimize_disabled = true
 maximize_disabled = true
-force_native = true
 
-[node name="Stopwatch" type="Node" parent="Window"]
-
-[node name="SubportGradientBackground" type="Sprite2D" parent="Window/Stopwatch"]
-position = Vector2(128, 128)
-texture = ExtResource("2_idj7w")
-
-[node name="TimerButtons" type="Control" parent="Window/Stopwatch"]
+[node name="TimerButtons" type="Control" parent="Window"]
 z_index = 1
 layout_mode = 3
 anchors_preset = 3
@@ -45,7 +36,7 @@ grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="Start" type="Button" parent="Window/Stopwatch/TimerButtons"]
+[node name="Start" type="Button" parent="Window/TimerButtons"]
 layout_mode = 0
 offset_left = -57.0
 offset_top = 14.0
@@ -55,7 +46,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "START"
 
-[node name="Stop" type="Button" parent="Window/Stopwatch/TimerButtons"]
+[node name="Stop" type="Button" parent="Window/TimerButtons"]
 layout_mode = 0
 offset_left = -53.0
 offset_top = 57.0
@@ -65,7 +56,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "STOP"
 
-[node name="Reset" type="Button" parent="Window/Stopwatch/TimerButtons"]
+[node name="Reset" type="Button" parent="Window/TimerButtons"]
 layout_mode = 0
 offset_left = -55.0
 offset_top = 102.0
@@ -75,6 +66,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "RESET"
 
+[node name="Stopwatch" type="Node" parent="Window"]
+
+[node name="SubportGradientBackground" type="Sprite2D" parent="Window/Stopwatch"]
+position = Vector2(128, 128)
+texture = ExtResource("2_idj7w")
+
 [node name="Text" type="Node" parent="Window/Stopwatch"]
 
 [node name="StopWatch" type="RichTextLabel" parent="Window/Stopwatch/Text"]
@@ -83,7 +80,7 @@ z_index = 1
 offset_left = 134.0
 offset_top = 71.0
 offset_right = 248.0
-offset_bottom = 111.0
+offset_bottom = 122.0
 theme_override_font_sizes/normal_font_size = 36
 text = "00.00"
 scroll_active = false
@@ -97,6 +94,7 @@ offset_right = 133.0
 offset_bottom = 122.0
 theme_override_font_sizes/normal_font_size = 36
 text = "60"
+scroll_active = false
 
 [node name="Colon1" type="RichTextLabel" parent="Window/Stopwatch/Text"]
 z_index = 1
@@ -106,6 +104,7 @@ offset_right = 157.0
 offset_bottom = 121.0
 theme_override_font_sizes/normal_font_size = 36
 text = ":"
+scroll_active = false
 
 [node name="Colon2" type="RichTextLabel" parent="Window/Stopwatch/Text"]
 z_index = 1
@@ -145,6 +144,6 @@ position = Vector2(20, 20)
 texture = ExtResource("4_rgh2o")
 
 [connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
-[connection signal="pressed" from="Window/Stopwatch/TimerButtons/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Window/Stopwatch/TimerButtons/Stop" to="." method="_on_stop_pressed"]
-[connection signal="pressed" from="Window/Stopwatch/TimerButtons/Reset" to="." method="on_reset_pressed"]
+[connection signal="pressed" from="Window/TimerButtons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Window/TimerButtons/Stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="Window/TimerButtons/Reset" to="." method="on_reset_pressed"]
