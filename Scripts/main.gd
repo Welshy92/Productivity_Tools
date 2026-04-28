@@ -15,6 +15,8 @@ func _ready() -> void:
 	%Hours.text = "0"
 	%StopwatchIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
 	load_notes()
+	DisplayServer.window_set_position(Vector2i(0,0), 0)
+	DisplayServer.window_set_size(Vector2i(0,0), 0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

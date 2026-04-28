@@ -9,6 +9,10 @@ Range of productivity tools that I use from stopwatches to not taking.
 
 ## Update History
 
+### V2.1
+
+* FIXED small invisible 'main' window box blocking inputs in middle of the main monitor.
+
 ### V2.0
 
 * Added Note taking app with basic save and autoload feature.
