@@ -1,8 +1,19 @@
 # Productivity_Tools
 Range of productivity tools that I use from stopwatches to not taking.
 
+## Planned Features and tweaks
+
+* Ability to toggle always ontop
+* Calculator
+* Timer with expiration noise.
 
 ## Update History
+
+### V2.0
+
+* Added Note taking app with basic save and autoload feature.
+* Added app title to top of the window.
+* The active app now shows a up in a different colour on the nav bar to signal that it is the one in use.
 
 ### V1.1
 
