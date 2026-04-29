@@ -3,11 +3,17 @@ Range of productivity tools that I use from stopwatches to not taking.
 
 ## Planned Features and tweaks
 
-* Ability to toggle always ontop
-* Calculator
+* Ability to toggle always ontop.
 * Timer with expiration noise.
+* About page.
+* Boarderless?
 
 ## Update History
+
+### V3.1
+
+* Added some error handling within thhe calculator app to stop the app from crashing.
+* FIXED certain buttons will get disabled on the calculator app at different points to stop the user from creating NIL sums.
 
 ### V3.0
 
