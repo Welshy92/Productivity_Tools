@@ -9,6 +9,10 @@ Range of productivity tools that I use from stopwatches to not taking.
 
 ## Update History
 
+### V3.0
+
+* Added Calulator app. This a basic calucaltor with addition, subtraction, multiplication and division.
+
 ### V2.1
 
 * FIXED small invisible 'main' window box blocking inputs in middle of the main monitor.

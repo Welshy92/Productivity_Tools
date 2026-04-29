@@ -4,7 +4,7 @@ var stopwatch: float = 0.0
 var minutes: int = 0
 var hours: int = 0
 
-enum window_states {Stopwatch, Notes}
+enum window_states {Stopwatch, Notes, Calculator}
 var active_window: window_states = window_states.Stopwatch
 
 
@@ -47,6 +47,7 @@ func _process(delta: float) -> void:
 
 ## The state changes when a nav bar button is pressed. It will firstly make all
 ## the different windows not visible and then find the correct window to show.
+## You need to parse "window_states.STATENAME" for the function to work.
 func changeState(window):
 	print("Old active window = ", active_window)
 	active_window = window
@@ -59,6 +60,7 @@ func changeState(window):
 	%Notes.visible = false
 	%NoteTaking.editable = false
 	%NoteIcon.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	%CalculatorIcon.modulate = Color(1.0, 1.0, 1.0, 1.0)
 	
 	if active_window == window_states.Stopwatch:
 		%Title.text = "[center][b][u]Stopwatch"
@@ -72,6 +74,11 @@ func changeState(window):
 		%Title.text = "[center][b][u]Note Taking"
 		%Notes.visible = true
 		%NoteTaking.editable = true
+		%NoteIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
+		
+	elif active_window == window_states.Calculator:
+		%Title.text = "[center][b][u]Calculator"
+		%Calculator.visible = true
 		%NoteIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
 
 
@@ -109,6 +116,9 @@ func _on_stopwatch_nav_pressed() -> void:
 func _on_notes_nav_pressed() -> void:
 	changeState(window_states.Notes)
 
+
+func _on_calculator_nav_pressed() -> void:
+	changeState(window_states.Calculator)
 
 func _on_save_notes_pressed() -> void:
 	var notes_content: String = %NoteTaking.text
