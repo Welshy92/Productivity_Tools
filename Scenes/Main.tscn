@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://druk6ch8sy8cj"]
+[gd_scene load_steps=13 format=3 uid="uid://druk6ch8sy8cj"]
 
 [ext_resource type="Script" uid="uid://dwe7cppbeb0xy" path="res://Scripts/main.gd" id="1_r150o"]
 [ext_resource type="Texture2D" uid="uid://bt3gropf36tlc" path="res://Assets/Subport_Gradient_Background.png" id="2_idj7w"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://4b5e644l105q" path="res://Assets/StopWatch.png" id="4_rgh2o"]
 [ext_resource type="Texture2D" uid="uid://dlb4wwext73jr" path="res://Assets/Notes.png" id="5_pbw6q"]
 [ext_resource type="Texture2D" uid="uid://buajf5kqgos7u" path="res://Assets/Calulator.png" id="6_v1gob"]
+[ext_resource type="Texture2D" uid="uid://drafo1or810pq" path="res://Assets/Timer.png" id="8_50glp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1gob"]
 content_margin_left = 5.0
@@ -35,6 +36,10 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 shadow_color = Color(0.20511743, 0.20511743, 0.20511743, 0.6)
 shadow_size = 3
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_50glp"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vy5pj"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_r150o")
@@ -394,9 +399,8 @@ position = Vector2(128, 278)
 texture = ExtResource("3_kln2b")
 
 [node name="StopwatchNav" type="Button" parent="Window/NavBar"]
-offset_left = 2.0
 offset_top = 258.0
-offset_right = 42.0
+offset_right = 40.0
 offset_bottom = 298.0
 
 [node name="StopwatchIcon" type="Sprite2D" parent="Window/NavBar/StopwatchNav"]
@@ -405,9 +409,9 @@ position = Vector2(20, 20)
 texture = ExtResource("4_rgh2o")
 
 [node name="NotesNav" type="Button" parent="Window/NavBar"]
-offset_left = 46.0
+offset_left = 42.0
 offset_top = 258.0
-offset_right = 86.0
+offset_right = 82.0
 offset_bottom = 298.0
 
 [node name="NoteIcon" type="Sprite2D" parent="Window/NavBar/NotesNav"]
@@ -416,15 +420,51 @@ position = Vector2(20, 20)
 texture = ExtResource("5_pbw6q")
 
 [node name="CalculatorNav" type="Button" parent="Window/NavBar"]
-offset_left = 90.0
+offset_left = 86.0
 offset_top = 258.0
-offset_right = 130.0
+offset_right = 126.0
 offset_bottom = 298.0
 
 [node name="CalculatorIcon" type="Sprite2D" parent="Window/NavBar/CalculatorNav"]
 unique_name_in_owner = true
 position = Vector2(20, 20)
 texture = ExtResource("6_v1gob")
+
+[node name="TimerNav" type="Button" parent="Window/NavBar"]
+modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
+offset_left = 130.0
+offset_top = 258.0
+offset_right = 170.0
+offset_bottom = 298.0
+disabled = true
+
+[node name="TimerIcon" type="Sprite2D" parent="Window/NavBar/TimerNav"]
+position = Vector2(20, 20)
+texture = ExtResource("8_50glp")
+
+[node name="CalculatorNav3" type="Button" parent="Window/NavBar"]
+modulate = Color(0.12156863, 0.12156863, 0.12156863, 1)
+offset_left = 174.0
+offset_top = 258.0
+offset_right = 214.0
+offset_bottom = 298.0
+disabled = true
+
+[node name="CalculatorIcon" type="Sprite2D" parent="Window/NavBar/CalculatorNav3"]
+position = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_50glp")
+
+[node name="AboutNav" type="Button" parent="Window/NavBar"]
+modulate = Color(0.12156863, 0.12156863, 0.12156863, 1)
+offset_left = 216.0
+offset_top = 258.0
+offset_right = 256.0
+offset_bottom = 298.0
+disabled = true
+
+[node name="AboutIcon" type="Sprite2D" parent="Window/NavBar/AboutNav"]
+position = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_vy5pj")
 
 [connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
 [connection signal="pressed" from="Window/Stopwatch/TimerButtons/Start" to="." method="_on_start_pressed"]

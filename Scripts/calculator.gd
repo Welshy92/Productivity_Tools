@@ -22,7 +22,6 @@ func resetCalc() -> void:
 
 
 func disableOperands(operand: String) -> void:
-	print("The operand is     ", operand)
 	if not operand == "-" and not operand == ".":
 		$CalcButtons/ButtonPlus.disabled = true
 		$CalcButtons/ButtonMultiply.disabled = true
@@ -169,7 +168,7 @@ func _on_button_equals_pressed() -> void:
 	
 	var parse_sum: String = current_sum
 	if len(current_sum) <= 1:
-		push_error("Invalid sum")
+		push_error("Invalid sum '", current_sum, "'. Length too short!")
 		current_sum = "0"
 		display_sum = "ERROR"
 	
@@ -177,15 +176,11 @@ func _on_button_equals_pressed() -> void:
 		if current_sum[0] == "-":
 			return
 		else:
-			push_error("Invalid sum")
+			push_error("Invalid sum '", current_sum, "'. Operand position error.")
 			current_sum = "0"
 			display_sum = "ERROR"
-	
-	if current_sum == ".":
-		push_error("Invalid sum")
-		current_sum = "0"
-		display_sum = "ERROR"
-	
+
+
 	if current_sum.contains("/") and not current_sum.contains("."):
 		parse_sum = str(current_sum + ".0")
 	else:

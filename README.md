@@ -10,6 +10,11 @@ Range of productivity tools that I use from stopwatches to not taking.
 
 ## Update History
 
+### V3.2
+
+* Change error messages to be more desciptive.
+* Add placeholder buttons for extra apps.
+
 ### V3.1
 
 * Added some error handling within thhe calculator app to stop the app from crashing.

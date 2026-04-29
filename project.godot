@@ -15,7 +15,7 @@ config/description="A suite of productivity tools that is in a small window that
 
 Created by Jacob of PhoenixDragon Games.
 Visit http://www.phoenixdragongames.com to see more of my work."
-config/version="3.0"
+config/version="3.2"
 run/main_scene="uid://druk6ch8sy8cj"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 run/low_processor_mode=true
