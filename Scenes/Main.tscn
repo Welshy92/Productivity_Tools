@@ -67,6 +67,7 @@ text = "[center][b][u]Stopwatch"
 
 [node name="Stopwatch" type="Node2D" parent="Window"]
 unique_name_in_owner = true
+visible = false
 
 [node name="TimerButtons" type="Control" parent="Window/Stopwatch"]
 z_index = 1
@@ -412,7 +413,6 @@ text = "."
 
 [node name="About" type="Node2D" parent="Window"]
 unique_name_in_owner = true
-visible = false
 
 [node name="SubportGradientBackground" type="Sprite2D" parent="Window/About"]
 modulate = Color(0, 0, 0, 1)
@@ -449,7 +449,7 @@ offset_bottom = 133.0
 bbcode_enabled = true
 text = "©2026 PhoenixDragon Games.
 
-App designed and developed by Jacob Welsh. "
+App designed and developed by Jacob Welsh using Godot. "
 horizontal_alignment = 1
 
 [node name="NavBar" type="Node" parent="Window"]

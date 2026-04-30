@@ -11,6 +11,11 @@ Visit https://www.phoenixdragongames.com for more of my work!
 
 ## Update History
 
+### V4.1
+
+* Added software icon.
+* Added License fulfillment.
+
 ### V4.0
 
 * About section added.

@@ -15,7 +15,7 @@ config/description="A suite of productivity tools that is in a small window that
 
 Created by Jacob of PhoenixDragon Games.
 Visit http://www.phoenixdragongames.com to see more of my work."
-config/version="4.0"
+config/version="4.1"
 run/main_scene="uid://druk6ch8sy8cj"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 run/low_processor_mode=true
@@ -23,7 +23,7 @@ boot_splash/bg_color=Color(0, 0, 0, 0)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="res://icon.svg"
+config/icon="uid://5cdl2ito0o86"
 
 [autoload]
 
