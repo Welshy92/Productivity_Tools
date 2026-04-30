@@ -1,12 +1,13 @@
-# Productivity_Tools
-Range of productivity tools that I use from stopwatches to not taking.
+# Productivity Tools By PhoenixDragon Games
+Range of productivity tools that I use from stopwatches to note taking.
+
+Visit https://www.phoenixdragongames.com for more of my work!
 
 ## Planned Features and tweaks
 
-* Ability to toggle always ontop.
+* Ability to toggle always on top.
 * Timer with expiration noise.
-* About page.
-* Boarderless?
+* Borderless?
 
 ## Update History
 
@@ -28,7 +29,7 @@ Range of productivity tools that I use from stopwatches to not taking.
 
 ### V3.0
 
-* Added Calulator app. This a basic calucaltor with addition, subtraction, multiplication and division.
+* Added calculator app. This a basic calculator with addition, subtraction, multiplication and division.
 
 ### V2.1
 
