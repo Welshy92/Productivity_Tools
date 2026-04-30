@@ -3,8 +3,9 @@ var is_stopwatch_running:bool = false
 var stopwatch: float = 0.0
 var minutes: int = 0
 var hours: int = 0
+var decimal_enabled = true
 
-enum window_states {Stopwatch, Notes, Calculator}
+enum window_states {Stopwatch, Notes, Calculator, Timerapp, About}
 var active_window: window_states = window_states.Stopwatch
 
 
@@ -49,25 +50,29 @@ func _process(delta: float) -> void:
 ## the different windows not visible and then find the correct window to show.
 ## You need to parse "window_states.STATENAME" for the function to work.
 func changeState(window):
-	print("Old active window = ", active_window)
 	active_window = window
-	print("New active window = ", active_window)
+	
+	#Remove Stopwatch
 	%Stopwatch.visible = false
-	%Start.disabled = true
-	%Stop.disabled = true
-	%Reset.disabled = true
 	%StopwatchIcon.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	
+	#Remove Notes
 	%Notes.visible = false
 	%NoteTaking.editable = false
 	%NoteIcon.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	
+	#Remove Calculator
+	%Calculator.visible = false
 	%CalculatorIcon.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	
+	#Remove About
+	%About.visible = false
+	%LinkButton.disabled = true
+	
 	
 	if active_window == window_states.Stopwatch:
 		%Title.text = "[center][b][u]Stopwatch"
 		%Stopwatch.visible = true
-		%Start.disabled = false
-		%Stop.disabled = false
-		%Reset.disabled = false
 		%StopwatchIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
 
 	elif active_window == window_states.Notes:
@@ -80,6 +85,16 @@ func changeState(window):
 		%Title.text = "[center][b][u]Calculator"
 		%Calculator.visible = true
 		%NoteIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
+
+	elif active_window == window_states.Timerapp:
+		%Title.text = "[center][b][u]Timer"
+	
+	elif active_window == window_states.About:
+		%Title.text = "[center][b][u]About"
+		%About.visible = true
+		%LinkButton.disabled = false
+		%AboutIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
+
 
 
 func load_notes():
@@ -119,6 +134,11 @@ func _on_notes_nav_pressed() -> void:
 
 func _on_calculator_nav_pressed() -> void:
 	changeState(window_states.Calculator)
+
+
+func _on_about_nav_pressed() -> void:
+	changeState(window_states.About)
+
 
 func _on_save_notes_pressed() -> void:
 	var notes_content: String = %NoteTaking.text

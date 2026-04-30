@@ -10,6 +10,12 @@ Range of productivity tools that I use from stopwatches to not taking.
 
 ## Update History
 
+### V4.0
+
+* About section added.
+* FIXED calculator app still visible when changing to another app.
+* Removed redundant button disable/enable code. They do this by default when changing visibility.
+
 ### V3.2
 
 * Change error messages to be more desciptive.

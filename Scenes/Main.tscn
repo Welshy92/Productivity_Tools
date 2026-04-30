@@ -1,13 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://druk6ch8sy8cj"]
+[gd_scene load_steps=14 format=3 uid="uid://druk6ch8sy8cj"]
 
 [ext_resource type="Script" uid="uid://dwe7cppbeb0xy" path="res://Scripts/main.gd" id="1_r150o"]
 [ext_resource type="Texture2D" uid="uid://bt3gropf36tlc" path="res://Assets/Subport_Gradient_Background.png" id="2_idj7w"]
 [ext_resource type="Script" uid="uid://dg14tqsm1imcj" path="res://Scripts/calculator.gd" id="3_jw32o"]
 [ext_resource type="Texture2D" uid="uid://dnsiypjpl1t6a" path="res://Assets/Bottom_Nav.png" id="3_kln2b"]
+[ext_resource type="Texture2D" uid="uid://dyou6lio22shw" path="res://Assets/PDGames.jpg" id="4_bmxlf"]
 [ext_resource type="Texture2D" uid="uid://4b5e644l105q" path="res://Assets/StopWatch.png" id="4_rgh2o"]
 [ext_resource type="Texture2D" uid="uid://dlb4wwext73jr" path="res://Assets/Notes.png" id="5_pbw6q"]
 [ext_resource type="Texture2D" uid="uid://buajf5kqgos7u" path="res://Assets/Calulator.png" id="6_v1gob"]
 [ext_resource type="Texture2D" uid="uid://drafo1or810pq" path="res://Assets/Timer.png" id="8_50glp"]
+[ext_resource type="Texture2D" uid="uid://cevp2ayf3lqs6" path="res://Assets/About.png" id="9_vy5pj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1gob"]
 content_margin_left = 5.0
@@ -38,8 +40,6 @@ shadow_color = Color(0.20511743, 0.20511743, 0.20511743, 0.6)
 shadow_size = 3
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_50glp"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vy5pj"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_r150o")
@@ -230,6 +230,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="CalcButtons" type="Control" parent="Window/Calculator"]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 0
 offset_top = 75.0
@@ -237,6 +238,7 @@ offset_right = 256.0
 offset_bottom = 257.0
 
 [node name="Button1" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 36.0
 offset_top = 19.0
@@ -246,6 +248,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "1"
 
 [node name="Button2" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 87.0
 offset_top = 19.0
@@ -255,6 +258,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "2"
 
 [node name="Button3" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 138.0
 offset_top = 19.0
@@ -264,6 +268,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "3"
 
 [node name="Button4" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 36.0
 offset_top = 59.0
@@ -273,6 +278,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "4"
 
 [node name="Button5" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 87.0
 offset_top = 59.0
@@ -282,6 +288,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "5"
 
 [node name="Button6" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 138.0
 offset_top = 59.0
@@ -291,6 +298,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "6"
 
 [node name="Button7" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 36.0
 offset_top = 100.0
@@ -300,6 +308,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "7"
 
 [node name="Button8" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 87.0
 offset_top = 100.0
@@ -309,6 +318,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "8"
 
 [node name="Button9" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 138.0
 offset_top = 100.0
@@ -318,6 +328,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "9"
 
 [node name="Button0" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 87.0
 offset_top = 145.0
@@ -327,6 +338,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "0"
 
 [node name="ButtonPlus" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 189.0
 offset_top = 19.0
@@ -337,6 +349,7 @@ disabled = true
 text = "+"
 
 [node name="ButtonMinus" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 189.0
 offset_top = 59.0
@@ -346,6 +359,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "-"
 
 [node name="ButtonMultiply" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 189.0
 offset_top = 100.0
@@ -356,6 +370,7 @@ disabled = true
 text = "x"
 
 [node name="ButtonDivide" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 189.0
 offset_top = 145.0
@@ -367,6 +382,7 @@ disabled = true
 text = "÷"
 
 [node name="ButtonEquals" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 138.0
 offset_top = 145.0
@@ -376,6 +392,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "="
 
 [node name="ButtonClear" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 8.0
 offset_right = 33.0
@@ -384,6 +401,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "C"
 
 [node name="ButtonDecimal" type="Button" parent="Window/Calculator/CalcButtons"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 36.0
 offset_top = 145.0
@@ -391,6 +409,48 @@ offset_right = 67.0
 offset_bottom = 176.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
 text = "."
+
+[node name="About" type="Node2D" parent="Window"]
+unique_name_in_owner = true
+visible = false
+
+[node name="SubportGradientBackground" type="Sprite2D" parent="Window/About"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(128, 128)
+texture = ExtResource("2_idj7w")
+
+[node name="LinkButton" type="LinkButton" parent="Window/About"]
+unique_name_in_owner = true
+offset_left = 44.0
+offset_top = 169.0
+offset_right = 216.0
+offset_bottom = 217.0
+disabled = true
+uri = "https://www.phoenixdragongames.com"
+
+[node name="PDGames Logo" type="Sprite2D" parent="Window/About/LinkButton"]
+position = Vector2(83.00002, 27)
+scale = Vector2(0.2375, 0.25208333)
+texture = ExtResource("4_bmxlf")
+
+[node name="Line2D" type="Line2D" parent="Window/About"]
+z_index = 4
+z_as_relative = false
+position = Vector2(0, 135)
+points = PackedVector2Array(0, 0, 256, 0)
+width = 1.0
+default_color = Color(0.25006506, 0.19302216, 0.22683868, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Window/About"]
+offset_left = 4.0
+offset_top = 32.0
+offset_right = 252.0
+offset_bottom = 133.0
+bbcode_enabled = true
+text = "©2026 PhoenixDragon Games.
+
+App designed and developed by Jacob Welsh. "
+horizontal_alignment = 1
 
 [node name="NavBar" type="Node" parent="Window"]
 
@@ -455,16 +515,15 @@ position = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_50glp")
 
 [node name="AboutNav" type="Button" parent="Window/NavBar"]
-modulate = Color(0.12156863, 0.12156863, 0.12156863, 1)
 offset_left = 216.0
 offset_top = 258.0
 offset_right = 256.0
 offset_bottom = 298.0
-disabled = true
 
 [node name="AboutIcon" type="Sprite2D" parent="Window/NavBar/AboutNav"]
+unique_name_in_owner = true
 position = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_vy5pj")
+texture = ExtResource("9_vy5pj")
 
 [connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
 [connection signal="pressed" from="Window/Stopwatch/TimerButtons/Start" to="." method="_on_start_pressed"]
@@ -491,3 +550,4 @@ texture = SubResource("PlaceholderTexture2D_vy5pj")
 [connection signal="pressed" from="Window/NavBar/StopwatchNav" to="." method="_on_stopwatch_nav_pressed"]
 [connection signal="pressed" from="Window/NavBar/NotesNav" to="." method="_on_notes_nav_pressed"]
 [connection signal="pressed" from="Window/NavBar/CalculatorNav" to="." method="_on_calculator_nav_pressed"]
+[connection signal="pressed" from="Window/NavBar/AboutNav" to="." method="_on_about_nav_pressed"]
