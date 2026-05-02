@@ -19,6 +19,7 @@ func resetCalc() -> void:
 	$CalcButtons/ButtonMultiply.disabled = true
 	$CalcButtons/ButtonDivide.disabled = true
 	$CalcButtons/ButtonEquals.disabled = true
+	%ButtonDecimal.disabled = false
 
 
 func disableOperands(operand: String) -> void:
@@ -159,9 +160,7 @@ func _on_button_decimal_pressed() -> void:
 
 
 func _on_button_clear_pressed() -> void:
-	display_sum = ""
-	current_sum = ""
-	updateSum()
+	resetCalc()
 
 
 func _on_button_equals_pressed() -> void:

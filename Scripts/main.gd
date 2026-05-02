@@ -14,7 +14,7 @@ func _ready() -> void:
 	%StopWatch.text = "00.00"
 	%Minutes.text = "00"
 	%Hours.text = "0"
-	%StopwatchIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
+	%AboutIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
 	load_notes()
 	DisplayServer.window_set_position(Vector2i(0,0), 0)
 	DisplayServer.window_set_size(Vector2i(0,0), 0)
@@ -68,6 +68,7 @@ func changeState(window):
 	#Remove About
 	%About.visible = false
 	%LinkButton.disabled = true
+	%AboutIcon.modulate = Color(1.0, 1.0, 1.0, 1.0)
 	
 	
 	if active_window == window_states.Stopwatch:
@@ -84,7 +85,7 @@ func changeState(window):
 	elif active_window == window_states.Calculator:
 		%Title.text = "[center][b][u]Calculator"
 		%Calculator.visible = true
-		%NoteIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
+		%CalculatorIcon.modulate = Color(0.0, 0.294, 0.294, 1.0)
 
 	elif active_window == window_states.Timerapp:
 		%Title.text = "[center][b][u]Timer"

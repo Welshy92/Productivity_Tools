@@ -8,8 +8,18 @@ Visit https://www.phoenixdragongames.com for more of my work!
 * Ability to toggle always on top.
 * Timer with expiration noise.
 * Borderless?
+* Use of keybinding for calculator?
+* Using an operand continues from the current answer instead of having to start a new sum everytime (or maybe a memory feature).
+* Ability to 'backspace' on the calculator app.
+* Add multiple tabs to the note taking app.
 
 ## Update History
+
+### V4.2
+
+* FIXED unable to use decimal in some cases that you should be able to.
+* FIXED could press '=' before anything to cause an error.
+* FIXED Nav button highlighting was incorrect upon open and when opening the calulator app.
 
 ### V4.1
 

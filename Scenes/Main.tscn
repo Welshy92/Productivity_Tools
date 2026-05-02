@@ -63,7 +63,7 @@ offset_top = -2.0
 offset_right = 251.0
 offset_bottom = 38.0
 bbcode_enabled = true
-text = "[center][b][u]Stopwatch"
+text = "[center][b][u]About"
 
 [node name="Stopwatch" type="Node2D" parent="Window"]
 unique_name_in_owner = true
@@ -390,6 +390,7 @@ offset_top = 145.0
 offset_right = 169.0
 offset_bottom = 176.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_jw32o")
+disabled = true
 text = "="
 
 [node name="ButtonClear" type="Button" parent="Window/Calculator/CalcButtons"]
